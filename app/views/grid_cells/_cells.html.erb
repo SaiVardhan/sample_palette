@@ -1,0 +1,9 @@
+<table id="palette-table" class="table table-bordered">
+  <%for row in 1..20 do %>
+   <tr>
+    <% for col in 1..20 do%>
+      <td> <%= generate_cell(row,col)%></td>
+    <%end%>
+   </tr>
+  <%end%>
+</table>

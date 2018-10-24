@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SamplePalette</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <div id="flash">
+      <% if notice.present? %>
+        <%= render partial: "grid_cells/success" %>
+      <% end %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
